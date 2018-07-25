@@ -1,4 +1,4 @@
-package net.lynxlee.toolsstudio.sqllite.object;
+package net.lynxlee.toolsstudio.sqlite.dbobj;
 
 import java.util.Vector;
 

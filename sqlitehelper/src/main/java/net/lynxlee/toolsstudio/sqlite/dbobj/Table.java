@@ -1,4 +1,4 @@
-package net.lynxlee.toolsstudio.sqllite.object;
+package net.lynxlee.toolsstudio.sqlite.dbobj;
 
 //import java.util.concurrent.ConcurrentHashMap;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tmatesoft.sqljet.core.SqlJetException;
 
-import net.lynxlee.toolsstudio.sqllite.SQLLiteDbHelper;
+import net.lynxlee.toolsstudio.sqlite.SQLiteHelper;
 
 /**
  * 数据表类
@@ -79,7 +79,7 @@ public class Table {
 	 * @return 行数据集合
 	 */
 	public Vector<Row> getRows() {
-		SQLLiteDbHelper dbHelper = new SQLLiteDbHelper();
+		SQLiteHelper dbHelper = new SQLiteHelper();
 		Vector<Row> rows = null;
 		try {
 			rows = dbHelper.select(db_name, this.TableName);
@@ -98,7 +98,7 @@ public class Table {
 	 * @return 行数据集合
 	 */
 	public Vector<Row> getRow(Field field) {
-		SQLLiteDbHelper dbutil = new SQLLiteDbHelper();
+		SQLiteHelper dbutil = new SQLiteHelper();
 		Vector<Row> rows = null;
 		try {
 			rows = dbutil.selectByField(db_name, this.TableName, field);
@@ -117,7 +117,7 @@ public class Table {
 	 * @return 添加行数
 	 */
 	public long putRows(Vector<Row> rows) {
-		SQLLiteDbHelper dbutil = new SQLLiteDbHelper();
+		SQLiteHelper dbutil = new SQLiteHelper();
 		Map<String, Object> map = new HashMap<String, Object>();
 		long retu = 0;
 		for (Row row : rows) {
@@ -167,7 +167,7 @@ public class Table {
 	 * @return true - 操作成功 false - 操作失败
 	 */
 	public boolean putRow(Row row) {
-		SQLLiteDbHelper dbutil = new SQLLiteDbHelper();
+		SQLiteHelper dbutil = new SQLiteHelper();
 		Map<String, Object> map = new HashMap<String, Object>();
 		for (Field field : row.getRow()) {
 			map.put(field.getFieldName(), field.getFieldValue());
@@ -212,7 +212,7 @@ public class Table {
 	 * @return true - 操作成功 false - 操作失败
 	 */
 	public boolean delRowByField(Field field) {
-		SQLLiteDbHelper dbutil = new SQLLiteDbHelper();
+		SQLiteHelper dbutil = new SQLiteHelper();
 		try {
 			dbutil.deleteByField(this.db_name, this.TableName, field);
 			return true;

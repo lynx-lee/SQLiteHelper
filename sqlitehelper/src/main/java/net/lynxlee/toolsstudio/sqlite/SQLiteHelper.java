@@ -1,4 +1,4 @@
-package net.lynxlee.toolsstudio.sqllite;
+package net.lynxlee.toolsstudio.sqlite;
 
 import java.io.File;
 import java.util.HashMap;
@@ -19,8 +19,8 @@ import org.tmatesoft.sqljet.core.table.ISqlJetTable;
 import org.tmatesoft.sqljet.core.table.ISqlJetTransaction;
 import org.tmatesoft.sqljet.core.table.SqlJetDb;
 
-import net.lynxlee.toolsstudio.sqllite.object.Field;
-import net.lynxlee.toolsstudio.sqllite.object.Row;
+import net.lynxlee.toolsstudio.sqlite.dbobj.Field;
+import net.lynxlee.toolsstudio.sqlite.dbobj.Row;
 
 /**
  * sqllite数据库集合句柄类
@@ -28,9 +28,9 @@ import net.lynxlee.toolsstudio.sqllite.object.Row;
  * @author air
  * 
  */
-public class SQLLiteDbHelper {
+public class SQLiteHelper {
 
-	private static Logger logger = LoggerFactory.getLogger(SQLLiteDbHelper.class);
+	private static Logger logger = LoggerFactory.getLogger(SQLiteHelper.class);
 
 	/**
 	 * sqllite数据库集合
@@ -512,7 +512,7 @@ public class SQLLiteDbHelper {
 	 */
 	// public static void main(String[] args) {
 	// ConfigLoader.getIntence().loadConfig();
-	// SQLLiteDbHelper dbutil = new SQLLiteDbHelper();
+	// SQLiteHelper dbutil = new SQLiteHelper();
 	// String db_name = Config.getResourceConfBean().getResource(
 	// Config.RESOURCE_CONFILE_DB);
 	//

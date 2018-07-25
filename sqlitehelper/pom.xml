@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.lynxlee.toolsstudio</groupId>
-	<artifactId>sqllitehelper</artifactId>
+	<artifactId>sqlitehelper</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>sqllitehelper</name>
-	<url>https://github.com/lynx-lee/SqlLiteHelper</url>
+	<name>sqlitehelper</name>
+	<url>https://github.com/lynx-lee/SQLiteHelper</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

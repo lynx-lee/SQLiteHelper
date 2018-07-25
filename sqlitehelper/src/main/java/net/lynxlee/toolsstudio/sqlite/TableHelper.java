@@ -1,8 +1,8 @@
-package net.lynxlee.toolsstudio.sqllite;
+package net.lynxlee.toolsstudio.sqlite;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-import net.lynxlee.toolsstudio.sqllite.object.Table;
+import net.lynxlee.toolsstudio.sqlite.dbobj.Table;
 
 /**
  * 数据表句柄类

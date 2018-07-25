@@ -1,4 +1,4 @@
-package net.lynxlee.toolsstudio.sqllite;
+package net.lynxlee.toolsstudio.sqlite;
 
 import java.io.IOException;
 
@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 
 public class ResourceConfDBLoader {
 
-	private static SQLLiteDbHelper dbutil = new SQLLiteDbHelper();
+	private static SQLiteHelper dbutil = new SQLiteHelper();
 	private static Logger logger = LoggerFactory
 			.getLogger(ResourceConfDBLoader.class);
 
